@@ -1,0 +1,157 @@
+:root {
+  --bg1: #e6f0ff;
+  --bg2: #ffe9dc;
+  --card-w: 420px;
+  --accent: #0b2545;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family:
+    "Poppins",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+  background: linear-gradient(
+    135deg,
+    rgb(226, 167, 241),
+    rgb(229, 172, 244),
+    rgb(241, 204, 250)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.card-outer {
+  width: var(--card-w);
+  position: relative;
+  padding-top: 48px;
+  border-radius: 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.14),
+    rgba(255, 255, 255, 0.06)
+  );
+  box-shadow:
+    0 12px 30px rgba(16, 24, 40, 0.12),
+    0 4px 8px rgba(255, 255, 255, 0.6) inset;
+  backdrop-filter: blur(8px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding-bottom: 28px;
+}
+
+.card {
+  margin: 0 20px;
+  background: rgba(245, 221, 255, 0.95);
+  border-radius: 14px;
+  padding: 56px 28px 28px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+  text-align: center;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #bb87e8 0%, #e6eefc 100%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -48px;
+  border: 6px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 18px rgba(11, 37, 69, 0.12);
+}
+
+h1 {
+  font-size: 26px;
+  margin: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+.subtitle {
+  margin: 6px 0 18px;
+  color: #556;
+  font-weight: 500;
+}
+
+.contacts {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.contacts li {
+  color: #2b3b4a;
+  font-weight: 500;
+}
+
+.contacts a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: transparent;
+  color: #334;
+}
+
+.icon img {
+  width: 18px;
+  height: 18px;
+  display: block;
+  object-fit: contain;
+}
+
+.text {
+  opacity: 0.95;
+}
+
+@media (max-width: 480px) {
+  .card-outer {
+    width: 92%;
+    padding-top: 36px;
+  }
+  .card {
+    padding: 48px 18px 18px;
+  }
+  .avatar {
+    width: 80px;
+    height: 80px;
+    top: -40px;
+  }
+}
